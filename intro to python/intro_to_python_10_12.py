@@ -53,8 +53,8 @@ star_sign_drinks = {"leo":"pina colada",
                     "aquarius": "tequila",
                     "pisces": "blood of enemies"}
 
-# for sign, drink in star_sign_drinks.items():
-#     print(f"{sign} likes to drink {drink}")
+for sign, drink in star_sign_drinks.items():
+    print(f"{sign} likes to drink {drink}")
 
 # list - ordered, indexable, mutable, allow duplicates
 fruits = ["apple", "mango", "grape","pineapple"]
