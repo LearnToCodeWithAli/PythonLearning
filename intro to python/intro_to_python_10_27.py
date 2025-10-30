@@ -46,60 +46,7 @@ signs = {"leo": "soda",
 #     print(f"{sign} likes to drink {drink}")
 
 
-# dfs - depth first search
-# binary trees only
-# preorder, postorder, inorder
 
-# preorder - root, left, right
-# postorder - left, right, root
-# inorder - left, root, right
-
-
-tree = {"A": ["B", "C"],
-        "B": ["D", "E"],
-        "C": ["F"],
-        "D": ["G"],
-        "E": [],
-        "F": [],
-        "G": []}
-
-
-def preorder_dfs(graph, node, visited):
-    if not visited:
-        visited = set()
-
-    print(node)
-    visited.add(node)
-    check_left_child(graph, node, visited)
-    check_right_child(graph, node, visited)
-
-def postorder_dfs(graph, node, visited):
-    if not visited:
-        visited = set()
-
-    check_left_child(graph, node, visited)
-    check_right_child(graph, node, visited)
-
-    print(node)
-    visited.add(node)
-
-def inorder_dfs(graph, node, visited):
-    if not visited:
-        visited = set()
-
-    check_left_child(graph,node,visited)
-    print(node)
-    check_right_child(graph,node,visited)
-
-def check_left_child(graph, node, visited):
-    if len(graph[node]) > 0:
-        preorder_dfs(graph, graph[node][0], visited)
-
-def check_right_child(graph, node, visited):
-    if len(graph[node]) > 1:
-        preorder_dfs(graph, graph[node][1], visited)
-
-inorder_dfs(tree,"A",None)
 
 
 
